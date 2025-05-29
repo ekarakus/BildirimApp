@@ -1,5 +1,6 @@
 package com.example.bildirimapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -24,10 +25,14 @@ public class MainActivity extends AppCompatActivity {
                 //burada giriş işlemleri yapılır
                 String email = bagla.editEmail.getText().toString();
                 String password = bagla.editPassword.getText().toString();
-                if (email == "ekarakus@btofis.com" && password == "123456") {
+                if (email.equals("ekarakus@btofis.com") && password.equals("123456")) {
                     //toast mesajı ver
                     Toast.makeText(MainActivity.this,
                             "Giriş Başarılı", Toast.LENGTH_LONG).show();
+                    //intent işlemi yapılır
+                    Intent intent = new Intent(MainActivity.this, Member.class);
+                    intent.putExtra("email", email);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this,
                             "Giriş Başarısız", Toast.LENGTH_SHORT).show();
