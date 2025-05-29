@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 if (email == "ekarakus@btofis.com" && password == "123456") {
                     //toast mesajı ver
                     Toast.makeText(MainActivity.this,
-                            "Giriş Başarılı", Toast.LENGTH_SHORT).show();
+                            "Giriş Başarılı", Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(MainActivity.this,
                             "Giriş Başarısız", Toast.LENGTH_SHORT).show();
